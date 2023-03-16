@@ -1,4 +1,3 @@
-"use client";
 import { Fragment, useContext, useEffect } from "react";
 import Head from "next/head";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
@@ -37,6 +36,8 @@ export default function Dashboard() {
                 <div className="flex items-center">
                   <div className="flex-shrink-0">
                     <Image
+                      width="100"
+                      height="100"
                       className="h-8 w-8"
                       src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
                       alt="Workflow"
@@ -83,6 +84,8 @@ export default function Dashboard() {
                             <Menu.Button className="max-w-xs bg-gray-800 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                               <span className="sr-only">Open user menu</span>
                               <Image
+                                width="100"
+                                height="100"
                                 className="h-8 w-8 rounded-full"
                                 src={user?.avatar_url ?? "/default-image.png"}
                                 alt=""
@@ -246,8 +249,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
       },
     };
   }
-
-  await apiClient.get("/users");
 
   return {
     props: {},

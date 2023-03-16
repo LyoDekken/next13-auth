@@ -1,13 +1,18 @@
-import 'tailwindcss/tailwind.css'
+"use client";
+import "tailwindcss/tailwind.css";
+import { AuthProvider } from "../contexts/Auth";
+import { ReactNode } from "react";
 
-import { AuthProvider } from '../contexts/Auth'
-
-function MyApp({ Component, pageProps }) {
+export default function MyApp({
+  Component,
+  pageProps,
+}: {
+  Component: React.FC;
+  pageProps: Record<string, unknown>;
+}): ReactNode {
   return (
     <AuthProvider>
       <Component {...pageProps} />
     </AuthProvider>
-  )
+  );
 }
-
-export default MyApp

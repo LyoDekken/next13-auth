@@ -1,4 +1,3 @@
-"use client"
 import React, { createContext, useEffect, useState } from "react";
 import { setCookie, parseCookies } from "nookies";
 import { useRouter } from "next/router";
@@ -16,9 +15,11 @@ type SignInData = {
 };
 
 type User = {
-  name?: string;
-  email?: string;
-  avatar_url?: string;
+  id: string
+  email: string;
+  name: string;
+  avatar_url: string;
+  role: string
 };
 
 type AuthContextType = {

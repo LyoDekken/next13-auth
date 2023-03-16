@@ -1,9 +1,8 @@
-"use client"
 import Head from "next/head";
-import { LockClosedIcon } from "@heroicons/react/outline";
+import { LockClosedIcon } from "@heroicons/react/solid";
 import { useForm } from "react-hook-form";
 import { useContext } from "react";
-import { AuthContext } from "../../src/contexts/Auth";
+import { AuthContext } from "../contexts/Auth";
 import Image from "next/image";
 
 export default function Home() {
@@ -23,6 +22,8 @@ export default function Home() {
       <div className="max-w-sm w-full space-y-8">
         <div>
           <Image
+            height="100"
+            width="100"
             className="mx-auto h-12 w-auto"
             src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
             alt="Workflow"
