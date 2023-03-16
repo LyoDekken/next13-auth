@@ -4,9 +4,6 @@ const nextConfig = {
   swcMinify: true,
   watch: true,
   debug: true,
-  experimental: {
-    appDir: true,
-  },
 }
 
 module.exports = nextConfig
